@@ -1,27 +1,35 @@
 """
-Day 1 — Variables & Data Types
-Python has several built-in data types. Here are the most common ones.
+变量与数据类型
+变量就像一个贴了标签的盒子，用来存放数据。
 """
 
-# --- Numbers ---
-age = 25                  # int (integer)
-price = 19.99             # float (decimal)
-print(f"I'm {age} years old.")
-print(f"This costs ¥{price}")
+# ---- 数字 ----
+年龄 = 25                # 整数
+身高 = 1.75              # 浮点数（小数）
+print(f"年龄：{年龄}，身高：{身高}米")
 
-# --- Strings ---
-name = "Python Beginner"
-greeting = 'Hello'        # Single or double quotes both work
-full = greeting + ", " + name  # String concatenation
-print(full)
+# ---- 字符串 ----
+姓名 = "小明"
+问候语 = f"你好，我叫{姓名}，今年{年龄}岁"
+print(问候语)
 
-# --- Booleans ---
-is_learning = True
-is_expert = False
-print(f"Learning: {is_learning}, Expert: {is_expert}")
+# 字符串可以拼接
+名 = "张"
+姓 = "三"
+全名 = 姓 + 名
+print("全名：", 全名)
 
-# --- Type checking ---
-print(f"age is type: {type(age)}")
-print(f"price is type: {type(price)}")
-print(f"name is type: {type(name)}")
-print(f"is_learning is type: {type(is_learning)}")
+# ---- 布尔值 ----
+是学生 = True
+在上班 = False
+print(f"是学生吗？{是学生}")
+print(f"在上班吗？{在上班}")
+
+# ---- 类型查看 ----
+print(f"年龄的类型：{type(年龄)}")
+print(f"身高的类型：{type(身高)}")
+print(f"姓名的类型：{type(姓名)}")
+print(f"是学生的类型：{type(是学生)}")
+
+# ---- 练一练 ----
+# 试试修改上面的变量值，看看输出有什么变化

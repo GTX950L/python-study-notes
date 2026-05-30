@@ -1,10 +1,14 @@
 """
-Day 1 — Hello World
-Your first Python program. Every programmer starts here!
+第一个 Python 程序
+这是每个程序员的起点 —— 向世界打个招呼！
 """
 
-print("Hello, World!")
-print("I'm learning Python!")
-print("Let the journey begin 🚀")
+# print() 是最常用的函数，用来在屏幕上输出内容
+print("Hello, Python!")  # 英文问候
+print("你好，世界！")      # 中文问候
 
-# Try changing the message above and run again!
+# 字符串可以用单引号或双引号
+print('开始我的编程之旅！')
+
+# 试试打印你自己的话：
+# print("在这里写点什么吧！")

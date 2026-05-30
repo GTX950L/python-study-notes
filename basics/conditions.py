@@ -1,40 +1,51 @@
 """
-Day 2 — Conditional Statements
-if / elif / else — making decisions in code.
+条件判断
+让程序根据不同情况做出不同反应。
+关键词：if、elif、else
 """
 
-score = 85
+分数 = 85
 
-if score >= 90:
-    grade = "A"
-elif score >= 80:
-    grade = "B"
-elif score >= 70:
-    grade = "C"
-elif score >= 60:
-    grade = "D"
+# ---- 基本判断 ----
+if 分数 >= 90:
+    print("优秀！")
+elif 分数 >= 80:
+    print("良好！")
+elif 分数 >= 60:
+    print("及格")
 else:
-    grade = "F"
+    print("继续努力！")
 
-print(f"Score: {score} → Grade: {grade}")
-
-# --- Comparison operators ---
-# ==  equal to
-# !=  not equal to
-# >   greater than
-# <   less than
-# >=  greater than or equal to
-# <=  less than or equal to
-
-# --- Logical operators ---
-# and   both must be True
-# or    at least one must be True
-# not   reverses True/False
-
-age = 20
-has_license = True
-
-if age >= 18 and has_license:
-    print("You can drive! 🚗")
+# ---- 比较运算符 ----
+温度 = 30
+if 温度 > 35:
+    print("太热了！")
+elif 温度 < 10:
+    print("太冷了！")
 else:
-    print("You cannot drive yet.")
+    print("温度刚刚好")
+
+# ---- 与、或、非 ----
+有会员卡 = True
+消费金额 = 500
+
+if 有会员卡 and 消费金额 >= 300:    # and：两个条件都满足
+    print("可以打八折！")
+
+下雨 = False
+带伞 = True
+if 下雨 or 带伞:                    # or：任一条件满足即可
+    print("不会淋湿")
+
+上班中 = False
+if not 上班中:                      # not：取反
+    print("可以休息")
+
+# ---- 练一练 ----
+# 写一个判断闰年的逻辑：
+# 能被4整除但不能被100整除，或者能被400整除
+年份 = 2024
+if (年份 % 4 == 0 and 年份 % 100 != 0) or (年份 % 400 == 0):
+    print(f"{年份}年是闰年")
+else:
+    print(f"{年份}年不是闰年")

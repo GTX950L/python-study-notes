@@ -1,32 +1,68 @@
 """
-Day 3 — Functions
-Reusable blocks of code — define once, use many times.
+函数
+把一段可以重复使用的代码打包起来。
+关键词：def、return
 """
 
-# --- Basic function ---
-def greet(name):
-    """Say hello to someone."""  # This is a docstring — documents the function
-    return f"Hello, {name}!"
+# ---- 基本函数定义 ----
+def 打招呼(名字):
+    """向指定的人打招呼"""
+    print(f"你好，{名字}！欢迎来学 Python。")
 
-print(greet("World"))
-print(greet("Python Learner"))
+打招呼("小明")
+打招呼("小红")
 
+# ---- 带返回值的函数 ----
+def 加法(a, b):
+    """返回两个数的和"""
+    return a + b
 
-# --- Function with default parameter ---
-def power(base, exponent=2):
-    """Raise base to exponent (default: square)."""
-    return base ** exponent
+结果 = 加法(3, 5)
+print(f"3 + 5 = {结果}")
 
-print(f"5² = {power(5)}")          # Uses default exponent=2
-print(f"2³ = {power(2, 3)}")       # Custom exponent
-print(f"10⁴ = {power(10, 4)}")
+# ---- 默认参数 ----
+def 介绍(姓名, 城市="深圳"):
+    """城市有默认值"""
+    print(f"{姓名}来自{城市}")
 
+介绍("张三")              # 使用默认城市
+介绍("李四", "北京")      # 覆盖默认值
 
-# --- Function that does something (no return) ---
-def print_multiplication_table(n):
-    """Print multiplication table for number n."""
-    print(f"\nMultiplication table of {n}:")
-    for i in range(1, 10):
-        print(f"  {n} × {i} = {n * i}")
+# ---- 多个返回值 ----
+def 计算矩形的面积和周长(长, 宽):
+    """返回面积和周长"""
+    面积 = 长 * 宽
+    周长 = 2 * (长 + 宽)
+    return 面积, 周长
 
-print_multiplication_table(7)
+矩形的面积, 矩形的周长 = 计算矩形的面积和周长(10, 5)
+print(f"面积：{矩形的面积}，周长：{矩形的周长}")
+
+# ---- 可变参数（*args） ----
+def 求和(*数字):
+    """可以接收任意数量的参数"""
+    return sum(数字)
+
+print(f"求和结果：{求和(1, 2, 3, 4, 5)}")
+
+# ---- 关键字参数（**kwargs） ----
+def 显示信息(**信息):
+    """接收键值对形式的参数"""
+    for 键, 值 in 信息.items():
+        print(f"{键}：{值}")
+
+显示信息(姓名="王五", 年龄=28, 职业="工程师")
+
+# ---- 练一练 ----
+# 写一个函数，判断一个数是否为质数
+def 是质数吗(数):
+    """判断一个数是否为质数"""
+    if 数 < 2:
+        return False
+    for i in range(2, int(数 ** 0.5) + 1):
+        if 数 % i == 0:
+            return False
+    return True
+
+print(f"7 是质数吗？{是质数吗(7)}")
+print(f"10 是质数吗？{是质数吗(10)}")

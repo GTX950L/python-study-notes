@@ -1,55 +1,93 @@
 """
-Day 3 — Lists, Tuples & Dictionaries
-Python's built-in data structures for organizing data.
+列表与字典
+两种最常用的数据容器。
 """
 
-# ============================================
-#  LISTS — ordered, mutable, allows duplicates
-# ============================================
-print("=== LISTS ===")
-fruits = ["apple", "banana", "orange"]
-fruits.append("grape")              # Add to end
-fruits.insert(1, "mango")           # Insert at position
-fruits.remove("banana")             # Remove by value
+# ==================== 列表 ====================
+print("=" * 30)
+print("列表操作")
+print("=" * 30)
 
-print(f"Fruits: {fruits}")
-print(f"First: {fruits[0]}, Last: {fruits[-1]}")
-print(f"Count: {len(fruits)}")
+# 创建列表
+购物清单 = ["牛奶", "面包", "鸡蛋", "苹果"]
+print(f"购物清单：{购物清单}")
 
-# List slicing
-numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-print(f"First 3: {numbers[:3]}")
-print(f"Last 3: {numbers[-3:]}")
-print(f"Middle: {numbers[3:7]}")
+# 访问元素（索引从 0 开始）
+print(f"第一个：{购物清单[0]}")
+print(f"最后一个：{购物清单[-1]}")
 
-# ============================================
-#  TUPLES — ordered, immutable, allows duplicates
-# ============================================
-print("\n=== TUPLES ===")
-point = (3, 4)
-rgb = (255, 128, 64)
-print(f"Point: x={point[0]}, y={point[1]}")
-print(f"RGB color: {rgb}")
-# point[0] = 5  # ← This would ERROR! Tuples can't be changed.
+# 添加元素
+购物清单.append("香蕉")        # 加到末尾
+print(f"追加后：{购物清单}")
 
-# ============================================
-#  DICTIONARIES — key-value pairs
-# ============================================
-print("\n=== DICTIONARIES ===")
-student = {
-    "name": "Xiao Ming",
-    "age": 22,
-    "scores": {"math": 95, "english": 88, "python": 92}
+购物清单.insert(2, "酸奶")     # 插入到指定位置
+print(f"插入后：{购物清单}")
+
+# 删除元素
+购物清单.remove("面包")        # 按值删除
+print(f"删除面包后：{购物清单}")
+
+删除的 = 购物清单.pop()        # 弹出最后一个
+print(f"弹出 {删除的}，剩余：{购物清单}")
+
+# 切片
+数字列表 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(f"前三个：{数字列表[:3]}")
+print(f"中间三个：{数字列表[3:6]}")
+print(f"每隔一个：{数字列表[::2]}")
+
+# 列表推导式
+平方数 = [x**2 for x in range(1, 6)]
+print(f"1-5 的平方：{平方数}")
+
+# ==================== 字典 ====================
+print("\n" + "=" * 30)
+print("字典操作")
+print("=" * 30)
+
+# 创建字典
+学生信息 = {
+    "姓名": "张三",
+    "年龄": 22,
+    "专业": "计算机科学",
+    "成绩": 88
 }
+print(f"学生信息：{学生信息}")
 
-print(f"Name: {student['name']}")
-print(f"Python score: {student['scores']['python']}")
+# 访问值
+print(f"姓名：{学生信息['姓名']}")
+print(f"专业：{学生信息.get('专业')}")
+print(f"班级：{学生信息.get('班级', '暂无')}")  # 不存在时返回默认值
 
-# Loop through dictionary
-print("\nAll scores:")
-for subject, score in student['scores'].items():
-    print(f"  {subject}: {score}")
+# 添加 / 修改
+学生信息["班级"] = "大三(2)班"
+学生信息["成绩"] = 92
+print(f"更新后：{学生信息}")
 
-# Add/update values
-student['grade'] = "A"
-print(f"Grade added: {student['grade']}")
+# 遍历
+for 键, 值 in 学生信息.items():
+    print(f"  {键} -> {值}")
+
+# ==================== 组合使用 ====================
+print("\n" + "=" * 30)
+print("组合使用")
+print("=" * 30)
+
+# 列表里放字典
+班级 = [
+    {"姓名": "张三", "成绩": 88},
+    {"姓名": "李四", "成绩": 95},
+    {"姓名": "王五", "成绩": 76},
+]
+
+# 遍历并计算平均分
+总分 = 0
+for 学生 in 班级:
+    print(f"{学生['姓名']}：{学生['成绩']}分")
+    总分 += 学生['成绩']
+print(f"平均分：{总分 / len(班级):.1f}")
+
+# ---- 练一练 ----
+# 找出成绩最高的学生
+最高分学生 = max(班级, key=lambda x: x['成绩'])
+print(f"第一名：{最高分学生['姓名']}，{最高分学生['成绩']}分")
