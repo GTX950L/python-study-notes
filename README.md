@@ -29,6 +29,7 @@ python basics/variables.py
 
 ## 📝 学习进度
 
+### 基础语法 ✅
 - [x] Hello World — 写出第一行代码
 - [x] 变量与数据类型 — 数字、字符串、布尔值
 - [x] 条件判断 — if / elif / else
@@ -36,9 +37,36 @@ python basics/variables.py
 - [x] 函数 — 定义与调用
 - [x] 列表与字典 — 数据容器
 - [x] 文件读写 — 操作文本文件
-- [ ] 异常处理
-- [ ] 模块与包
-- [ ] API 请求
+- [x] 异常处理 — try / except
+- [x] 模块与包 — import 和 from...import
+- [x] API 请求 — requests 库基础
+
+### 面向对象编程 🆕
+- [x] 类与对象 — class 定义和实例化
+- [x] 继承 — 子类复用父类代码
+- [x] 封装 — 私有属性和 @property
+- [x] 多态 — 同名方法不同行为
+- [x] 抽象方法 — @abstractmethod
+- [x] 类方法/静态方法 — @classmethod / @staticmethod
+- [x] 组合 — 类之间的拥有关系
+
+> 🏭 面向对象练手项目 → [python-oop-device-manager](https://github.com/GTX950L/python-oop-device-manager)
+
+### 数据分析 🆕
+- [x] pandas 基础 — DataFrame / Series
+- [x] 数据读取 — pd.read_csv()
+- [x] 数据清洗 — 处理空值、类型转换
+- [x] 分组聚合 — groupby() + agg()
+- [x] 可视化 — matplotlib 柱状图/折线图/饼图
+- [ ] 数据透视表 — pivot_table()
+- [ ] 时间序列分析
+
+> 📈 数据分析练手项目 → [python-data-analyzer](https://github.com/GTX950L/python-data-analyzer)
+
+### 下一步计划
+- [ ] Web 开发基础 — Flask 入门
+- [ ] 自动化脚本 — 批量处理 Excel
+- [ ] 单元测试 — pytest
 
 ---
 
