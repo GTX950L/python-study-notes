@@ -7,14 +7,29 @@
 ```
 python-learning-journal/
 ├── README.md
-└── basics/
-    ├── hello_world.py     # 第一个程序
-    ├── variables.py       # 变量与数据类型
-    ├── conditions.py      # 条件判断
-    ├── loops.py           # 循环
-    ├── functions.py       # 函数
-    ├── lists_dicts.py     # 列表与字典
-    └── file_io.py         # 文件读写
+├── basics/          # 基础语法（9 个文件）
+│   ├── hello_world.py
+│   ├── variables.py
+│   ├── conditions.py
+│   ├── loops.py
+│   ├── functions.py
+│   ├── lists_dicts.py
+│   ├── file_io.py
+│   ├── exception_handling.py
+│   └── modules.py
+├── oop/             # 面向对象（5 个文件）
+│   ├── 01_class_and_object.py
+│   ├── 02_inheritance.py
+│   ├── 03_encapsulation.py
+│   ├── 04_polymorphism.py
+│   └── 05_advanced.py
+└── pandas/          # 数据分析（6 个文件）🆕
+    ├── 01_dataframe_series.py
+    ├── 02_read_data.py
+    ├── 03_data_cleaning.py
+    ├── 04_groupby_agg.py
+    ├── 05_pivot_table.py
+    └── 06_matplotlib.py
 ```
 
 ## 🚀 运行方式
@@ -54,11 +69,11 @@ python basics/variables.py
 
 ### 数据分析 🆕
 - [x] pandas 基础 — DataFrame / Series
-- [x] 数据读取 — pd.read_csv()
-- [x] 数据清洗 — 处理空值、类型转换
+- [x] 数据读取 — pd.read_csv() / read_excel()
+- [x] 数据清洗 — 处理空值、类型转换、异常值
 - [x] 分组聚合 — groupby() + agg()
-- [x] 可视化 — matplotlib 柱状图/折线图/饼图
-- [ ] 数据透视表 — pivot_table()
+- [x] 数据透视表 — pivot_table() / crosstab()
+- [x] 可视化 — matplotlib 柱状图/折线图/饼图/双轴图
 - [ ] 时间序列分析
 
 > 📈 数据分析练手项目 → [python-data-analyzer](https://github.com/GTX950L/python-data-analyzer)
